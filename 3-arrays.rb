@@ -73,10 +73,12 @@ p squares[0][:index]
 # array of numbers
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
-greater_4 = numbers.select do |n|
-  n > 4
-end
 
+# greater_4 = numbers.select do |n|
+#   n > 4
+# end
+
+greater_4 = numbers.select {|n| n > 4 }
 p greater_4
 
 
