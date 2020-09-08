@@ -13,6 +13,7 @@ end
 
 write("hello.txt", "welcome message")
 
+# sums integers or floats
 def sum(*args) 
   puts args.inspect
   result = 0
