@@ -18,4 +18,8 @@ module HackyEncryption
   def decrypt(estr) 
   
   end
+
+  def salt 
+    Time.new
+  end
 end
