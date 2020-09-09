@@ -20,6 +20,11 @@ class ActiveRecord
     @@count
   end
 
+  # Class variable setter
+  def self.count=(value) 
+    @@count = value
+  end
+
   def initialize(name)
     @record = ["users","posts"]
     @name = name
@@ -55,4 +60,7 @@ p User.count
 
 post = Post.new("posts")
 p Post.count
+
+Post.count = 100
+p ActiveRecord.count
 
