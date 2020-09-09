@@ -5,6 +5,16 @@ class ActiveRecord
     @table_name
   end
 
+  # Alternate ways to create class methods
+  class << self 
+    def all 
+      puts "Fetch all records..."
+    end
+    def find_by (criteria, value)
+      puts "Find by #{criteria} - #{value}"
+    end
+  end
+
   def get_table_name 
     # p self
     # p self.class
@@ -37,6 +47,9 @@ puts Address.new.get_table_name  # address
 # end
 
 #puts User.table_name
+
+puts ActiveRecord.all 
+puts ActiveRecord.find_by("city", "mumbai")
 
 
 
