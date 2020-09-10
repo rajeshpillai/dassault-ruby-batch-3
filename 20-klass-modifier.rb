@@ -46,7 +46,7 @@ class SpecTest < Test
   def compare(other_object)
     #private_method1     # this works
     # p other_object.private_method1
-    p other_object.protected_method1
+    other_object.protected_method1
   end
 
   def method1 
