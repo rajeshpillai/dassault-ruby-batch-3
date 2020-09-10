@@ -4,8 +4,11 @@
 # reduce
 # select
 
+require_relative "./my-enumerable"
+
 class Store 
-  include Enumerable
+  # include Enumerable
+  include MyEnumerable
 
   attr_reader :snacks 
 
@@ -35,9 +38,15 @@ mumbai.add_snack("Pepsi")
 p mumbai
 
 p mumbai.first
+
+found = mumbai.find do |e|
+  e == "Pepsi"
+end
+
+p "Found: #{found}"
+
 p mumbai.map { |snack| snack.upcase}
 p mumbai.select { |snack| snack.downcase.include?("v")}
-p mumbai.last
 
 
 
