@@ -23,6 +23,7 @@ puts "--------------------------------"
 
 nums = [1,2,3,4,5]
 result2 = nums.reduce do |prev, curr|
+  p "#{prev} - #{curr}"
   p "ACCUR: #{prev}"
   prev + curr
 end
