@@ -10,6 +10,7 @@ module MyEnumerable
     result
   end
 
+  # parameter to find method
   def find (&block)
     result = nil
     found = false 
@@ -34,8 +35,34 @@ module MyEnumerable
   end
 
   def select(&block)
+    result = []
+    each do |e|
+      result <<  e if  block.call(e) == true
+    end
+    result
   end
 
   def find_all 
   end
+
+  # Assignments : Refer the docs
+  # Then implement it
+  def reduce 
+  end
+
+  def collect 
+  end
+
+  def sort 
+  end
+
+  def max 
+  end
+
+  def min 
+  end
+
+  def zip 
+  end
+
 end
