@@ -12,5 +12,5 @@ class Numeric
   end
 end
 
-puts 100.usd
-puts 200.euro
+p 100.usd
+p 200.euro
