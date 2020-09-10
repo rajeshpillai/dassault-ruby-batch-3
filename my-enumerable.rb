@@ -5,7 +5,7 @@ module MyEnumerable
   def map (&block)
     result = []   # local variable 
     each do |ele|
-      result << ele
+      result << block.call(ele)
     end
     result
   end
@@ -38,6 +38,4 @@ module MyEnumerable
 
   def find_all 
   end
-
-  #.....
 end

@@ -34,6 +34,7 @@ mumbai = Store.new
 mumbai.add_snack("Vada Pav")
 mumbai.add_snack("Samosa")
 mumbai.add_snack("Pepsi")
+mumbai.add_snack("Pattice")
 
 p mumbai
 
@@ -46,8 +47,11 @@ end
 p "Found: #{found}"
 
 p mumbai.map { |snack| snack.upcase}
-p mumbai.select { |snack| snack.downcase.include?("v")}
+p mumbai.select { |snack| snack.downcase.include?("p")}
 
+all = mumbai.find_all do |e|
+  
+end # all items
 
 
 
