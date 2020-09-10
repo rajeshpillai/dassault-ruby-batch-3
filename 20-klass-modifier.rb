@@ -38,6 +38,31 @@ class UnitTest < Test
   end
 end
 
+class SpecTest < Test 
+  def run 
+  end
+
+  # public method
+  def compare(other_object)
+    #private_method1     # this works
+    # p other_object.private_method1
+    p other_object.protected_method1
+  end
+
+  def method1 
+  end
+
+  def method2
+  end
+
+  def method3 
+  end
+
+  # Alternate way to mark private/protected
+  private :method1, :method2
+  protected :method3 
+end
+
 t1 = Test.new 
 t1.method1 
 t1.method2
@@ -48,4 +73,6 @@ t1.method2
 utest = UnitTest.new 
 utest.run 
 
+stest = SpecTest.new 
+stest.compare(t1)
 
