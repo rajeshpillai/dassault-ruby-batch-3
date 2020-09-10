@@ -19,6 +19,30 @@ end
 
 p near_members.flatten
 
+puts "--------------------------------"
+
+nums = [1,2,3,4,5]
+result2 = nums.reduce do |prev, curr|
+  p "ACCUR: #{prev}"
+  prev + curr
+end
+
+p result2
+
+
+nums = [1,2,3,4,5]
+result3 = nums.reduce(0) do |sum, num|
+  p "#{sum} - #{num}"
+  p "ACCUR: #{sum}"
+  sum + num
+end
+
+p result3
+
+
+
+
+
 # def reduce (initial, &block)
 #   block.call(initialize, {a, b})
 # end
