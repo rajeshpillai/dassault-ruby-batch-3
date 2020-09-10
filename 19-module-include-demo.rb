@@ -3,6 +3,7 @@ require_relative './modules/digest'
 class Base 
 end
 
+# Mixins
 class Person < Base
   include Encryption
   include HackyEncryption  # This will overite if same already loaded
