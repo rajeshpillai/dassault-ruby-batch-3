@@ -37,6 +37,7 @@ p mumbai
 p mumbai.first
 p mumbai.map { |snack| snack.upcase}
 p mumbai.select { |snack| snack.downcase.include?("v")}
+p mumbai.last
 
 
 
