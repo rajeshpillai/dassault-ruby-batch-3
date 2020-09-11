@@ -1,3 +1,5 @@
+require "byebug"
+
 # Using it for pluralizing
 require "active_support/inflector"
 
@@ -87,7 +89,6 @@ end
 # p Project.data
 # puts "Task data..."
 # p Task.data
-
 
 puts "Find User by id : 2"
 user1 = User.find_by_id(2)
